@@ -1,0 +1,10 @@
+com/tuimm/synchronousconsumer/controller/model/FooRequestDTO.class
+com/tuimm/synchronousconsumer/configuration/OpenApiConfig.class
+com/tuimm/synchronousconsumer/configuration/JacksonConfiguration.class
+com/tuimm/synchronousconsumer/event/model/FooEventV1.class
+com/tuimm/synchronousconsumer/controller/model/EventVersion.class
+com/tuimm/synchronousconsumer/SynchronousconsumerApplication.class
+com/tuimm/synchronousconsumer/controller/FooController.class
+com/tuimm/synchronousconsumer/event/FooEventHandler.class
+com/tuimm/synchronousconsumer/event/model/FooEventV2.class
+com/tuimm/synchronousconsumer/service/FooService.class

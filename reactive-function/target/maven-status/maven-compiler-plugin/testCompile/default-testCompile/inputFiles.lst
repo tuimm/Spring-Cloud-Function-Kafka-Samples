@@ -1,0 +1,3 @@
+/home/aegido/git/sample-projects/spring-cloud-function-kafka-sample/reactive-function/src/test/java/com/tuimm/springcloudfunctionkafkasample/event/FooEventHandlerTest.java
+/home/aegido/git/sample-projects/spring-cloud-function-kafka-sample/reactive-function/src/test/java/com/tuimm/springcloudfunctionkafkasample/service/FooServiceTest.java
+/home/aegido/git/sample-projects/spring-cloud-function-kafka-sample/reactive-function/src/test/java/com/tuimm/springcloudfunctionkafkasample/controller/FooControllerTest.java

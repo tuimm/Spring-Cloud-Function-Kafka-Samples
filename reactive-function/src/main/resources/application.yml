@@ -1,0 +1,46 @@
+#------------------------------
+# SPRING DATA
+#------------------------------
+spring.data.mongodb:
+    uri: mongodb://localhost:27017/test
+
+#------------------------------
+# SPRING CLOUD STREAM
+#------------------------------
+spring.cloud:
+  stream:
+    kafka.binder:
+      brokers: localhost:9092
+      healthTimeout: 10
+      requiredAcks: 1
+      autoCreateTopics: true # true - only for develop and test environments
+      autoAddPartitions: true
+      minPartitionCount: 1
+      replicationFactor: 1
+    bindings:
+      generateFooEvent-out-0:
+        contentType: application/json
+        destination: foo.input.event
+        group: @project.artifactId@
+      consumeAndPublishV2-in-0:
+        contentType: application/json
+        destination: foo.input.event
+        group: @project.artifactId@
+      consumeAndPublishV2-out-0:
+        contentType: application/json
+        destination: foo.output.event
+
+#------------------------------
+# OPENAPI
+#------------------------------
+openapi.info:
+  service_name: @project.name@
+  service_description: @project.description@
+  version: @project.version@
+
+#------------------------------
+# LOGGING
+#------------------------------
+logging:
+  level:
+    com.tuimm: DEBUG

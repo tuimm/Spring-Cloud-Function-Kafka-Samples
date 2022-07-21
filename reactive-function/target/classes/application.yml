@@ -1,0 +1,42 @@
+#------------------------------
+# SPRING DATA
+#------------------------------
+spring.data.mongodb:
+    uri: mongodb://localhost:27017/test
+spring:
+  application:
+    name: spring-cloud-function-kafka-sample
+#------------------------------
+# SPRING CLOUD STREAM
+#------------------------------
+spring.cloud:
+  stream:
+    kafka.binder:
+      brokers: "msk-kfk-common-01.test.tui-dx.com:9092,msk-kfk-common-02.test.tui-dx.com:9092"
+      healthTimeout: 10
+      requiredAcks: 1
+      autoCreateTopics: true # true - only for develop and test environments
+      autoAddPartitions: true
+      minPartitionCount: 1
+      replicationFactor: 1
+    bindings:
+      consumeAndPublishV2-in-0:
+        contentType: application/json
+        destination: transfer.booking.event
+        group: reactive-function-kafka-sample
+
+#------------------------------
+# OPENAPI
+#------------------------------
+openapi.info:
+  service_name: Reactive Function Kafka Sample
+  service_description: Spring Cloud Reactive Function Kafka Sample
+  version: 1.0.0
+
+#------------------------------
+# LOGGING
+#------------------------------
+logging:
+  config: classpath:log4j2-local.xml # Location of the logging configuration file. For instance, `classpath:logback.xml` for Logback.
+  level:
+    com.tuimm: DEBUG
